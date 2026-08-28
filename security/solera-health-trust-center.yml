@@ -1,0 +1,53 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.soleranetwork.com/trust-center
+trust_center:
+  url: https://www.soleranetwork.com/trust-center
+  status: 200
+  public: true
+  authentication_required: false
+certifications:
+- id: soc-2-type-2
+  name: SOC 2 Type 2
+  status: attested
+  scope: Security, Availability, Processing Integrity, Confidentiality, Privacy
+  evidence: >-
+    Trust Center states a SOC 2 Type 2 report is maintained - "an internal controls report
+    capturing how a company safeguards customer data" - across all five trust services criteria.
+  report_available: not stated on the public page
+- id: hitrust-r2
+  name: HITRUST CSF Certified (r2)
+  status: certified
+  evidence: HITRUST Certified badge displayed on the Trust Center page.
+- id: hipaa
+  name: HIPAA
+  status: conformant
+  evidence: >-
+    "Conform to HIPAA and HITRUST industry healthcare specific requirements." Solera Health
+    operates as a business associate handling protected health information for payers and employers.
+- id: fips-140-2
+  name: FIPS 140-2 (key management)
+  status: component-level
+  evidence: >-
+    Trust Center describes a "sophisticated, FIPS 140-2-certified, HSM-based, key management
+    architecture." This is a claim about the HSM used, not a certification of Solera Health itself.
+controls_published:
+  encryption_at_rest: AES-256, BitLocker Drive Encryption
+  encryption_in_transit: SSL/TLS (TLS 1.1 or higher stated), IPsec
+  key_management: FIPS 140-2 certified HSM
+contacts:
+- purpose: compliance
+  email: compliance@soleranetwork.com
+  source: https://www.soleranetwork.com/trust-center
+privacy:
+- name: Privacy Policy
+  url: https://www.soleranetwork.com/privacy-policy
+  status: 200
+- name: Notice of Privacy Practices
+  url: https://www.soleranetwork.com/notice-of-privacy-practices
+  status: 200
+gaps:
+- No subprocessor list published.
+- No security status page (status.soleranetwork.com does not resolve).
+- No vulnerability disclosure policy, no security.txt, no bug bounty program.
+- No downloadable report request flow on the public page.

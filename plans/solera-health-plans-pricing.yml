@@ -1,0 +1,17 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.soleranetwork.com/
+plan_count: 0
+plans: []
+note: >-
+  Solera Health publishes no pricing of any kind. https://www.soleranetwork.com/pricing returns 404
+  and no pricing, plans or rate-card page appears in the site navigation or footer. The commercial
+  motion is enterprise contracting with health plans and employers, routed through
+  https://www.soleranetwork.com/contact-us; member-facing enrollment at gosolera.com is free to the
+  member because the benefit is paid for by their plan or employer. An honest zero, recorded rather
+  than omitted.
+probed:
+- url: https://www.soleranetwork.com/pricing
+  status: 404
+- url: https://www.soleranetwork.com/contact-us
+  status: 200

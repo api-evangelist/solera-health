@@ -1,0 +1,34 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.soleranetwork.com
+versioning:
+  scheme: not published
+  note: No API version policy is published; there is no developer documentation to carry one.
+deprecation_policy:
+  published: false
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy published, and RFC 8594 Sunset/Deprecation header support could
+    not be observed - the gateway returns no such headers on its anonymous 404s.
+status_page:
+  published: false
+  probed:
+  - url: https://status.soleranetwork.com/
+    status: 'no response'
+    note: Hostname does not resolve in DNS.
+sla:
+  published: false
+  note: >-
+    No public SLA. Availability commitments are presumably carried in the payer and employer
+    contracts, which are not public.
+changelog:
+  published: false
+  note: >-
+    No API changelog. The company publishes a dated news feed at
+    https://www.soleranetwork.com/news-and-updates (HTTP 200), which covers corporate and product
+    announcements - network launches, the HALO platform, partnerships - but not API changes. It is
+    wired as Blog, not ChangeLog.
+deprecated_operations: []
+note: >-
+  No StatusPage or Deprecation pointer is emitted in apis.yml: neither surface exists, and those
+  pointers assert that the provider publishes one.

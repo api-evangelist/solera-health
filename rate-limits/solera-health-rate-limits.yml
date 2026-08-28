@@ -1,0 +1,17 @@
+generated: '2026-08-28'
+method: searched
+source: https://api.soleranetwork.com and https://www.soleranetwork.com
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No published rate limits. Solera Health has no developer documentation to state them, and no
+  runtime signal could be observed either: every anonymous request to the api.soleranetwork.com
+  Azure API Management gateway returns a 54-byte JSON 404 carrying no RateLimit-*, X-RateLimit-* or
+  Retry-After header. Azure APIM supports rate-limit-by-key and quota policies, so limits are very
+  likely enforced per subscription key behind the wall, but nothing about them is observable or
+  documented from outside. An honest zero.
+probed:
+- url: https://api.soleranetwork.com/v1
+  status: 404
+  rate_limit_headers_returned: none

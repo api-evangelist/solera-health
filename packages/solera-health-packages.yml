@@ -1,0 +1,36 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  npm registry search, PyPI, RubyGems, crates.io metadata endpoints, github.com/SoleraHealth, and
+  the soleranetwork.com site
+package_count: 0
+packages: []
+note: >-
+  Solera Health ships no first-party client library in any public registry. npm search returned no
+  Solera Health package (the nearest name matches, @solera-bl/packages, is BuffrLabs, and every
+  "halo" hit is the unrelated Halo CMS project); pypi.org/pypi/solera-health/json, /solera/json and
+  /soleranetwork/json all returned 404; rubygems.org/api/v1/gems/solera.json returned 404. The
+  company's GitHub organization github.com/SoleraHealth exists and has been open since 2022-06-30
+  but publishes zero public repositories, so there is no source-distributed SDK either. No SDKs
+  pointer is emitted in apis.yml - sdk_count must not fire on an empty set.
+registries_probed:
+- registry: npm
+  query: solera-health, soleranetwork, solera-halo
+  result: no first-party package
+  status: 200
+- registry: pypi
+  query: solera-health, solera, soleranetwork
+  result: absent
+  status: 404
+- registry: rubygems
+  query: solera
+  result: absent
+  status: 404
+- registry: crates.io
+  query: solera
+  result: unrelated crate, not Solera Health
+  status: 200
+- registry: github
+  query: github.com/SoleraHealth
+  result: organization exists, 0 public repositories
+  status: 200

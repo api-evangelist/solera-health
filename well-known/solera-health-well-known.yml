@@ -1,0 +1,66 @@
+generated: '2026-08-28'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every Solera Health host
+note: >-
+  Nothing is served. All three Solera Health hosts were probed for the full /.well-known/ set and
+  every path returned a genuine 404. www.soleranetwork.com and www.gosolera.com are Webflow sites
+  whose /.well-known/* responses are 88-byte and 9,320-byte hard 404s respectively - distinct from
+  the 11,031-byte styled 404 page an unknown in-site path returns - so this host is NOT a soft-404
+  catch-all and the negatives are real. api.soleranetwork.com is an Azure API Management gateway
+  that answers every unmatched path, /.well-known/ included, with the 54-byte APIM JSON envelope
+  {"statusCode":404,"message":"Resource not found"}. No WellKnown or SecurityTxt pointer is emitted
+  in apis.yml, because a recorded absence must not be scored as a presence.
+hit_count: 0
+hosts:
+- host: https://www.soleranetwork.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /this-path-should-not-exist-12345
+    status: 404
+    bytes: 11031
+    note: >-
+      Styled Webflow 404 page at 11,031 bytes versus 88 bytes for every /.well-known/ path, which
+      confirms the /.well-known/ negatives are real 404s and not an SPA catch-all.
+- host: https://api.soleranetwork.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /halo
+    status: 404
+    bytes: 54
+    note: >-
+      Azure API Management returns an identical 54-byte JSON 404 for every unmatched route, so no
+      anonymous route enumeration is possible on this gateway.
+- host: https://www.gosolera.com
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404

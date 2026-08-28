@@ -1,0 +1,60 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.soleranetwork.com/trust-center
+note: >-
+  Solera Health publishes no machine-readable contract, so nothing here is derived from a spec.
+  Every asserted standard below is a published claim on Solera Health's own Trust Center; the
+  healthcare domain standards that would normally be read out of a contract are listed separately
+  as unverifiable rather than asserted either way.
+standards:
+- id: hipaa
+  conforms: true
+  evidence: >-
+    Trust Center: "Conform to HIPAA and HITRUST industry healthcare specific requirements."
+  source: https://www.soleranetwork.com/trust-center
+- id: hitrust-csf
+  conforms: true
+  evidence: HITRUST Certified (r2) badge displayed on the Trust Center.
+  source: https://www.soleranetwork.com/trust-center
+- id: soc-2-type-2
+  conforms: true
+  evidence: SOC 2 Type 2 report described across all five trust services criteria.
+  source: https://www.soleranetwork.com/trust-center
+- id: fips-140-2
+  conforms: partial
+  evidence: FIPS 140-2 certified HSM used for key management; not an organizational certification.
+  source: https://www.soleranetwork.com/trust-center
+domain_standard_conformance:
+  market: healthcare / payer-provider benefits administration
+  determination: unverifiable
+  note: >-
+    The healthcare regime shortlist (FHIR R4, SMART on FHIR, US Core, USCDI, Da Vinci, CARIN Blue
+    Button, FHIR Bulk Data, CDS Hooks, C-CDA, HL7 v2, DICOM) plus the X12 administrative set
+    (834 enrollment, 837 claim, 270/271 eligibility) that a benefits manager would plausibly speak
+    could not be checked either way: Solera Health publishes no OpenAPI, GraphQL SDL, AsyncAPI or
+    reference of any kind, and its Azure APIM gateway returns an identical JSON 404 for every
+    anonymous path. Recorded as unverifiable rather than false - this pipeline does not assert a
+    domain standard a provider never published, and does not assert its absence from silence.
+  probed:
+  - url: https://api.soleranetwork.com/openapi.json
+    status: 404
+  - url: https://api.soleranetwork.com/swagger.json
+    status: 404
+  - url: https://api.soleranetwork.com/graphql
+    status: 404
+  - url: https://solera-api-gateway.developer.azure-api.net/
+    status: 200
+    note: Azure default unpublished-developer-portal placeholder.
+unverifiable:
+- fhir-r4
+- smart-on-fhir
+- us-core
+- uscdi
+- da-vinci
+- carin-blue-button
+- fhir-bulk-data
+- cds-hooks
+- c-cda
+- hl7-v2
+- x12-834
+- x12-270-271

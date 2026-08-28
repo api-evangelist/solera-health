@@ -1,0 +1,21 @@
+generated: '2026-08-28'
+method: searched
+status: none
+source: >-
+  Search of soleranetwork.com, github.com/SoleraHealth, npm, and a live tools/list POST against
+  api.soleranetwork.com/mcp
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: >-
+  No MCP server, hosted or local. Solera Health publishes no MCP endpoint, no npm or PyPI package,
+  and no MCP mention anywhere on its own site or in its GitHub organization. A JSON-RPC tools/list
+  POST to https://api.soleranetwork.com/mcp returned the Azure APIM 404 envelope. No candidate tool
+  list could be derived either, because Solera Health publishes no OpenAPI to derive one from. No
+  MCPServer pointer is emitted in apis.yml, and no endpoint URL is invented here.
+tools: []
+probed:
+- url: https://api.soleranetwork.com/mcp
+  method: POST tools/list
+  status: 404
