@@ -1,16 +1,14 @@
 aid: solera-health
 name: Solera Health
-description: >-
-  Solera Health is a Phoenix, Arizona based preventive-care benefits manager that acts as a single
-  integration point between health plans, employers and a curated network of non-clinical digital
-  health providers. Its HALO omni-condition management platform lets a payer or employer contract,
-  configure, enroll and report across eight condition networks - weight management, diabetes
-  prevention and management, hypertension, behavioral and mental health, musculoskeletal, tobacco
-  cessation, women's health and digestive health - spanning 25+ partner point solutions including
-  Calm, Headspace, Lyra Health, Sword Health, WeightWatchers and Dario Health, alongside customer
-  contracted solutions Solera did not source. Solera operates an Azure API Management gateway on
-  its own domain for those partner and payer integrations, but publishes no public developer
-  portal, API reference or machine-readable contract.
+description: Solera Health is a Phoenix, Arizona based preventive-care benefits manager that acts as a
+  single integration point between health plans, employers and a curated network of non-clinical digital
+  health providers. Its HALO omni-condition management platform lets a payer or employer contract, configure,
+  enroll and report across eight condition networks - weight management, diabetes prevention and management,
+  hypertension, behavioral and mental health, musculoskeletal, tobacco cessation, women's health and digestive
+  health - spanning 25+ partner point solutions including Calm, Headspace, Lyra Health, Sword Health,
+  WeightWatchers and Dario Health, alongside customer contracted solutions Solera did not source. Solera
+  operates an Azure API Management gateway on its own domain for those partner and payer integrations,
+  but publishes no public developer portal, API reference or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/solera-health/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -56,15 +54,14 @@ tags:
 - Preventive Care
 - Telehealth
 apis:
-- aid: solera-health-integrations-api
+- aid: solera-health:solera-health-integrations-api
   name: Solera Health Integrations API
-  description: >-
-    A live Azure API Management gateway operated by Solera Health on its own api.soleranetwork.com
-    domain, used for payer, employer and digital-health-partner integrations into the HALO platform.
-    Every anonymous request returns the Azure APIM "Resource not found" JSON envelope and the
-    matching developer portal at solera-api-gateway.developer.azure-api.net still serves Azure's
-    default unpublished-portal placeholder, so no operations, reference or machine-readable
-    contract are publicly discoverable. Recorded here as a probed, credential-gated surface.
+  description: A live Azure API Management gateway operated by Solera Health on its own api.soleranetwork.com
+    domain, used for payer, employer and digital-health-partner integrations into the HALO platform. Every
+    anonymous request returns the Azure APIM "Resource not found" JSON envelope and the matching developer
+    portal at solera-api-gateway.developer.azure-api.net still serves Azure's default unpublished-portal
+    placeholder, so no operations, reference or machine-readable contract are publicly discoverable. Recorded
+    here as a probed, credential-gated surface.
   humanURL: https://www.soleranetwork.com/halo-platform
   baseURL: https://api.soleranetwork.com
   tags:
@@ -75,9 +72,9 @@ apis:
   x-evidence:
     probed: '2026-08-28'
     gateway_dns: api.soleranetwork.com CNAME solera-api-gateway.portal.azure-api.net
-    gateway_response: '404 application/json {"statusCode":404,"message":"Resource not found"}'
-    developer_portal: https://solera-api-gateway.developer.azure-api.net/ returned 200 with the
-      Azure default "The content hasn't been published yet" placeholder
+    gateway_response: 404 application/json {"statusCode":404,"message":"Resource not found"}
+    developer_portal: https://solera-api-gateway.developer.azure-api.net/ returned 200 with the Azure
+      default "The content hasn't been published yet" placeholder
   properties: []
 maintainers:
 - FN: Kin Lane
@@ -127,12 +124,11 @@ x-enrichment:
 x-coverage:
   state: gated
   reason: customer-only-docs
-  detail: >-
-    api.soleranetwork.com is a live Azure API Management gateway on Solera Health's own domain, but
-    its developer portal at solera-api-gateway.developer.azure-api.net still serves Azure's default
-    "The content hasn't been published yet" placeholder, so the reference and spec exist only inside
-    a signed payer or digital-health-partner integration and every anonymous path returns the APIM
-    JSON 404.
+  detail: api.soleranetwork.com is a live Azure API Management gateway on Solera Health's own domain,
+    but its developer portal at solera-api-gateway.developer.azure-api.net still serves Azure's default
+    "The content hasn't been published yet" placeholder, so the reference and spec exist only inside a
+    signed payer or digital-health-partner integration and every anonymous path returns the APIM JSON
+    404.
   evidence:
   - url: https://solera-api-gateway.developer.azure-api.net/
     status: 200
