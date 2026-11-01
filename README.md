@@ -64,5 +64,103 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Solera Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/solera-health_stock/
+Solera Health is a Phoenix, Arizona based preventive-care benefits manager that acts as a single integration point between health plans, employers and a curated network of non-clinical digital health providers. Its HALO omni-condition management platform lets a payer or employer contract, configure, enroll and report across eight condition networks - weight management, diabetes prevention and management, hypertension, behavioral and mental health, musculoskeletal, tobacco cessation, women's health and digestive health - spanning 25+ partner point solutions including Calm, Headspace, Lyra Health, Sword Health, WeightWatchers and Dario Health, alongside customer contracted solutions Solera did not source. Solera operates an Azure API Management gateway on its own domain for those partner and payer integrations, but publishes no public developer portal, API reference or machine-readable contract.
+
+**Areas:** Company · Health · Healthcare · Digital Health · Benefits · Employee Benefits · Health Plans · Payers · Provider Network · Chronic Condition Management · Preventive Care · Telehealth
+
+## Solera Health on APIs.io
+
+Everything profiled for Solera Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/solera-health/](https://apis.io/providers/solera-health/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Solera Health Integrations API](https://apis.io/apis/solera-health/solera-health-integrations-api/) — A live Azure API Management gateway operated by Solera Health on its own api.soleranetwork.com domain, used for payer, employer and digital-health-partner…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Solera Health Domain Security](https://apis.io/security/solera-health/solera-health-domain-security/)
+- [Solera Health Trust Center](https://apis.io/security/solera-health/solera-health-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Solera Health Plans Pricing](https://apis.io/plans/solera-health/solera-health-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Solera Health Rate Limits](https://apis.io/rate-limits/solera-health/solera-health-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.soleranetwork.com/)
+- [Sign up](https://www.gosolera.com/)
+- [Support](https://www.soleranetwork.com/contact-us)
+- [Blog](https://www.soleranetwork.com/news-and-updates)
+- [Compliance](https://www.soleranetwork.com/trust-center)
+- [Terms of service](https://www.soleranetwork.com/terms-of-use)
+- [Privacy policy](https://www.soleranetwork.com/privacy-policy)
+- [GitHub](https://github.com/SoleraHealth)
+
+## API Evangelist rating
+
+**Kin Score 22.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 50.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/solera-health/](https://apis.io/providers/solera-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Solera Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/solera-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
